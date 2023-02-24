@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Cloning the repo') {
             steps {
-                git branch: 'Jenkinsworkflow', url: 'https://github.com/Zahid07/knowledge_gpt.git'
+                git branch: 'i190544', url: 'https://github.com/SyedMustafa145/researchgpt.git'
                 sh 'pip install poetry'
 
             }
