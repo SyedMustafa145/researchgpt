@@ -9,22 +9,22 @@ pipeline {
         stage('Cloning the repo') {
             steps {
                 git branch: 'i190544', url: 'https://github.com/SyedMustafa145/researchgpt.git'
-                sh 'pip install poetry'
+                bat 'pip install poetry'
 
             }
         }
 
         stage('Lint with flake8') {
             steps {
-                sh 'pip install flake8'
-                sh 'flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics'
+                bat 'pip install flake8'
+                bat 'flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics'
             }
         }
 
         stage('Format with black') {
             steps {
-                sh 'pip install black'
-                sh 'black .'
+                bat 'pip install black'
+                bat 'black .'
             }
         }
 
